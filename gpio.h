@@ -2,6 +2,7 @@
 #define GPIO_H
 
 #include <QObject>
+#include "config.h"
 
 class Gpio : public QObject
 {
@@ -10,7 +11,7 @@ public:
     explicit Gpio(QObject *parent = nullptr);  // Constructor
     ~Gpio(); // Destructor
     void set(int pin, int state);
-    void set(int pattern); // 0b1010
+    void set(unsigned int pattern);
 
 signals:
 
